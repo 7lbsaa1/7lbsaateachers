@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة حلبسة - مدرسين الثانوية العامة</title>
-        <link rel="shortcut icon" type="image\png" href="https://instagram.fcai19-7.fna.fbcdn.net/v/t1.15752-9/585067380_32451865237791202_6846020559636154248_n.jpg?_nc_cat=111&ccb=7-5&_nc_sid=0024fc&_nc_ohc=VmDO29g_cNIQ7kNvwEghoYo&_nc_oc=AdlU67z9AoKfy6KWIz6AmHMTyc2YNyNA_1Mx2wHIMCm7DSpWhXWIm58p60Xt30WDiGE&_nc_zt=23&_nc_ht=instagram.fcai19-7.fna&oh=03_Q7cD3wGn-zm5mkFaEWmMPbFsD0FifUBrsgr3twWa8p2Zt3tuMw&oe=694A3AED"
-        <link rel="stylesheet" href="syle.css">
-        <style>
+    <link rel="shortcut icon" type="image/png" href="https://instagram.fcai19-7.fna.fbcdn.net/v/t1.15752-9/585067380_32451865237791202_6846020559636154248_n.jpg?_nc_cat=111&ccb=7-5&_nc_sid=0024fc&_nc_ohc=VmDO29g_cNIQ7kNvwEghoYo&_nc_oc=AdlU67z9AoKfy6KWIz6AmHMTyc2YNyNA_1Mx2wHIMCm7DSpWhXWIm58p60Xt30WDiGE&_nc_zt=23&_nc_ht=instagram.fcai19-7.fna&oh=03_Q7cD3wGn-zm5mkFaEWmMPbFsD0FifUBrsgr3twWa8p2Zt3tuMw&oe=694A3AED">
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -21,6 +20,59 @@
             position: relative;
             color: #fff;
             overflow-x: hidden;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        /* الوضع الداكن */
+        body.dark-mode {
+            background: radial-gradient(circle at top, #1a1a2e 0%, #16213e 40%, #0f0f1e 100%);
+            color: #e0e0e0;
+        }
+
+        /* زر تبديل الوضع */
+        .theme-toggle {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.15) rotate(180deg);
+            box-shadow: 0 15px 40px rgba(106, 139, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.95) rotate(180deg);
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(30, 30, 50, 0.5);
+            border-color: rgba(255, 255, 255, 0.15);
         }
 
         /* خلفية جزيئات متحركة */
@@ -38,11 +90,16 @@
             height: 4px;
             background: rgba(255, 255, 255, 0.6);
             border-radius: 50%;
-            animation: float 14s linear infinite;
+            animation: float-particle 14s linear infinite;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
-        @keyframes float {
+        body.dark-mode .particle {
+            background: rgba(138, 180, 255, 0.4);
+            box-shadow: 0 0 10px rgba(138, 180, 255, 0.3);
+        }
+
+        @keyframes float-particle {
             0% {
                 transform: translateY(0) translateX(0) rotate(0deg);
                 opacity: 0;
@@ -72,6 +129,10 @@
             font-size: 3em;
             opacity: 0.15;
             animation: floatIcon 20s infinite ease-in-out;
+        }
+
+        body.dark-mode .floating-icon {
+            opacity: 0.08;
         }
 
         @keyframes floatIcon {
@@ -108,6 +169,10 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
             animation: wave 15s linear infinite;
+        }
+
+        body.dark-mode .wave {
+            background: linear-gradient(90deg, transparent, rgba(100,120,200,0.08), transparent);
         }
 
         .wave:nth-child(2) {
@@ -175,6 +240,14 @@
             animation: shimmer 3s linear infinite;
         }
 
+        body.dark-mode header h1 {
+            background: linear-gradient(45deg, #a8d5ff, #6a8bff, #a8d5ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0 12px 30px rgba(106, 139, 255, 0.3);
+        }
+
         @keyframes shimmer {
             to {
                 background-position: 200% center;
@@ -235,6 +308,11 @@
             overflow: hidden;
         }
 
+        body.dark-mode .filter-btn {
+            background: rgba(30, 40, 80, 0.3);
+            border-color: rgba(100, 120, 200, 0.2);
+        }
+
         .filter-btn::before {
             content: '';
             position: absolute;
@@ -266,6 +344,10 @@
             transform: scale(1.05);
         }
 
+        body.dark-mode .filter-btn.active {
+            background: linear-gradient(135deg, #4a6bdf, #8163cf);
+        }
+
         .filter-btn span {
             position: relative;
             z-index: 1;
@@ -295,6 +377,11 @@
             overflow: hidden;
             border: 2px solid transparent;
             animation: cardAppear 0.8s ease backwards;
+        }
+
+        body.dark-mode .teacher-card {
+            background: rgba(20, 25, 45, 0.6);
+            border-color: rgba(100, 120, 200, 0.15);
         }
 
         .teacher-card.hidden {
@@ -348,6 +435,10 @@
             z-index: 0;
         }
 
+        body.dark-mode .teacher-card::before {
+            background: linear-gradient(135deg, rgba(100,120,200,0.15), transparent 60%);
+        }
+
         .teacher-card::after {
             content: '';
             position: absolute;
@@ -365,6 +456,12 @@
             box-shadow: 0 35px 85px rgba(58, 47, 138, 0.45),
                         0 0 40px rgba(138, 127, 255, 0.3);
             border: 2px solid rgba(255, 255, 255, 0.25);
+        }
+
+        body.dark-mode .teacher-card:hover {
+            box-shadow: 0 35px 85px rgba(0, 0, 0, 0.6),
+                        0 0 40px rgba(106, 139, 255, 0.4);
+            border-color: rgba(138, 180, 255, 0.3);
         }
 
         .teacher-card:hover::before {
@@ -389,6 +486,12 @@
             transition: all 0.5s ease;
         }
 
+        body.dark-mode .teacher-image-wrapper {
+            background: linear-gradient(145deg, rgba(40,50,80,0.3), rgba(20,30,50,0.5));
+            box-shadow: inset 0 10px 25px rgba(100, 120, 200, 0.1),
+                        inset 0 -10px 25px rgba(0, 0, 0, 0.3);
+        }
+
         .teacher-card:hover .teacher-image-wrapper {
             box-shadow: inset 0 10px 35px rgba(255, 255, 255, 0.2),
                         inset 0 -10px 35px rgba(0, 0, 0, 0.15),
@@ -403,6 +506,10 @@
             border-radius: 18px;
             transition: transform 0.5s ease, filter 0.5s ease;
             background: rgba(255, 255, 255, 0.12);
+        }
+
+        body.dark-mode .teacher-image {
+            background: rgba(30, 40, 60, 0.3);
         }
 
         .teacher-card:hover .teacher-image {
@@ -423,6 +530,10 @@
             box-shadow: 0 12px 25px rgba(255, 193, 7, 0.35);
             animation: badgeBounce 2s infinite;
             z-index: 2;
+        }
+
+        body.dark-mode .subject-badge {
+            background: linear-gradient(135deg, #d8b33c, #df7c32);
         }
 
         @keyframes badgeBounce {
@@ -449,6 +560,12 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: all 0.3s ease;
+        }
+
+        body.dark-mode .teacher-name {
+            background: linear-gradient(135deg, #a8d5ff, #6a8bff);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
 
         .teacher-card:hover .teacher-name {
@@ -482,6 +599,10 @@
             transition: all 0.35s ease;
             position: relative;
             overflow: hidden;
+        }
+
+        body.dark-mode .visit-platform-btn {
+            background: linear-gradient(135deg, #4a6bdf, #8163cf);
         }
 
         .visit-platform-btn::before {
@@ -520,6 +641,10 @@
             animation: fadeInUp 1s ease 1.8s backwards;
             position: relative;
             overflow: hidden;
+        }
+
+        body.dark-mode footer {
+            background: rgba(10, 15, 30, 0.5);
         }
 
         @keyframes fadeInUp {
@@ -562,6 +687,12 @@
             z-index: 1;
         }
 
+        body.dark-mode footer strong {
+            background: linear-gradient(135deg, #dfc35b, #dfa361);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
         /* نجوم لامعة */
         .star {
             position: fixed;
@@ -572,6 +703,11 @@
             box-shadow: 0 0 10px white;
             animation: starTwinkle 3s infinite;
             pointer-events: none;
+        }
+
+        body.dark-mode .star {
+            background: #a8d5ff;
+            box-shadow: 0 0 10px #a8d5ff;
         }
 
         @keyframes starTwinkle {
@@ -586,6 +722,14 @@
         }
 
         @media (max-width: 768px) {
+            .theme-toggle {
+                width: 55px;
+                height: 55px;
+                top: 20px;
+                left: 20px;
+                font-size: 1.6em;
+            }
+
             header h1 {
                 font-size: 2.2em;
             }
@@ -622,6 +766,11 @@
     </style>
 </head>
 <body>
+    <!-- زر تبديل الوضع -->
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+        🌙
+    </button>
+
     <!-- جزيئات الخلفية -->
     <div class="particles" id="particles"></div>
 
@@ -974,7 +1123,7 @@
             <a class="teacher-card" data-subject="عربي" href="https://www.elqaiser.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">📚 عربي</span>
-                    <img src="https://scontent.fcai19-11.fna.fbcdn.net/v/t1.15752-9/590231332_1420975319541870_9082989642432403136_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=MYD6pto3aawQ7kNvwFsSwzx&_nc_oc=AdlYY4gC-uPWwP5z1rdRpTjitkkQ5hgS7W67UmJ4TC8fpclQ6vtl3ISKhw_DFIuJe3U&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcai19-11.fna&oh=03_Q7cD4AEDj1ZDLg_ZEobJQeJz2JaORKmvJBOJMnwJkRKRRwPOAA&oe=69567FB6" alt="محمد طارق" class="teacher-image">
+                    <img src="images/elqesser.7lbsaa.jpg" alt="محمد طارق" class="teacher-image">
                 </div>
                 <div class="teacher-info">
                     <h2 class="teacher-name">محمد طارق</h2>
@@ -985,11 +1134,36 @@
         </div>
 
         <footer>
-            <p><strong>منصة حلبسة</strong> - جميع الحقوق محفوظة © 2024</p>
+            <p><strong>منصة حلبسة</strong> - جميع الحقوق محفوظة © 2026</p>
         </footer>
     </div>
 
     <script>
+        // نظام تبديل الوضع الداكن/الفاتح
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // التحقق من الوضع المحفوظ
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+                console.log('🌙 تم التبديل إلى الوضع الداكن');
+            } else {
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+                console.log('☀️ تم التبديل إلى الوضع الفاتح');
+            }
+        });
+
         // توليد جزيئات الخلفية
         const particlesContainer = document.getElementById('particles');
         const particleCount = 80;
@@ -1064,18 +1238,8 @@
         });
 
         console.log('🎓 منصة حلبسة: 25 مدرس متاح الآن! 🚀');
+        console.log('🌓 نظام الوضع الداكن/الفاتح جاهز!');
         console.log('✨ نظام الفلترة حسب المادة جاهز!');
-        console.log('📋 القائمة الكاملة حسب المادة:');
-        console.log('🧪 كيمياء (2): خالد صقر، محمد عبدالجواد');
-        console.log('🧬 أحياء (4): أحمد الجوهري، محمد أيمن، ماجد إمام، حميدة أحمد');
-        console.log('⚡ فيزياء (5): حسن ماهر، محمد عبدالمعبود، محمود مجدي، حسام خليل، كيرلس القص');
-        console.log('📚 عربي (3): محمد صلاح، رضا الفاروق، محمد طارق');
-        console.log('🌍 إنجليزي (3): عبدالحميد حامد، محمد صلاح، محمد رضوان');
-        console.log('🔢 رياضيات (3): أحمد عصام، محمد سعد، إسلام الصعيدي');
-        console.log('🌏 جغرافيا (2): إسلام الصعيدي، محمد ناصر');
-        console.log('📜 تاريخ (2): أحمد عادل، إبراهيم البحيري');
-        console.log('🧠 فلسفة (1): أسامة الجابري');
     </script>
 </body>
 </html>
-
