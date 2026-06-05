@@ -30,18 +30,16 @@ body {
   color: var(--text-color);
   min-height: 100vh;
   overflow-x: hidden;
-  transition: background 0.3s, color 0.3s;
 }
 
-/* التنسيق الرئيسي لتوسيط محتوى الصفحة بالكامل */
 .container-app {
-  max-w: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 24px;
   width: 100%;
 }
 
-/* ضبط الـ Navbar */
+/* التنسيق الأساسي لـ الهيدر العلوي */
 nav {
   display: flex;
   justify-content: space-between;
@@ -84,14 +82,13 @@ nav {
   width: 200px;
 }
 
-/* ضبط الهيدر والكلام */
 header {
   text-align: center;
   margin-bottom: 40px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 12px;
 }
@@ -101,7 +98,6 @@ header p {
   font-size: 14px;
 }
 
-/* أزرار الفلترة */
 .filters-container {
   display: flex;
   flex-wrap: wrap;
@@ -132,15 +128,14 @@ header p {
   transform: scale(1.05);
 }
 
-/* شبكة كروت المدرسين السحرية (تنظم الصفوف تلقائياً) */
+/* شبكة كروت المدرسين المحمية من الترحيل */
 .teachers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 24px;
   width: 100%;
 }
 
-/* كارت المدرس الـ Glassmorphic المظبوط */
 .glass-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -151,16 +146,15 @@ header p {
   justify-content: space-between;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s, border-color 0.3s;
+  transition: transform 0.2s, border-color 0.2s;
   box-shadow: 0 10px 25px var(--shadow-color);
 }
 
 .glass-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   border-color: var(--accent-color);
 }
 
-/* ضبط برواز الصورة وبتر الزيادات عشان تطلع مربعة مظبوطة */
 .image-container {
   position: relative;
   width: 100%;
@@ -168,20 +162,20 @@ header p {
   border-radius: 14px;
   overflow: hidden;
   margin-bottom: 16px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.1);
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* دي بتخلي الصورة تملى المربع ومتمطش */
+  object-fit: cover;
 }
 
 .subject-badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(4px);
   color: white;
   padding: 4px 10px;
@@ -206,7 +200,6 @@ header p {
   color: #94a3b8;
 }
 
-/* زرار زيارة المنصة */
 .visit-btn {
   width: 100%;
   padding: 10px;
@@ -221,7 +214,6 @@ header p {
   gap: 6px;
 }
 
-/* المتجاوب للشاشات الصغيرة */
 @media (max-w: 640px) {
   nav {
     flex-direction: column;
