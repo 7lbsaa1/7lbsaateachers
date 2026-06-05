@@ -13,7 +13,7 @@
     "subject": "أحياء",
     "badge": "🧬 أحياء",
     "url": "https://ahmed-elgohary.com/",
-    "image": "images/gohary.7lbsaa.png"
+    "image": "/images/gohary.7lbsaa.png"
   },
   {
     "id": 3,
@@ -205,7 +205,7 @@
     "subject": "عربي",
     "badge": "📚 عربي",
     "url": "https://www.elqaiser.com/",
-    "image": "images/elqesser.7lbsaa.jpg"
+    "image": "/images/elqesser.7lbsaa.jpg"
   },
   {
     "id": 27,
@@ -237,6 +237,6 @@
     "subject": "أحياء",
     "badge": "🧬 أحياء",
     "url": "https://www.youtube.com/@dr.mahmoudsaadvector",
-    "image": "images/Vectorbiology-7lbsaa.jpg"
+    "image": "/images/Vectorbiology-7lbsaa.jpg"
   }
 ]
