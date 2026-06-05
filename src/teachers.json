@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "خالد صقر",
+    "subject": "كيمياء",
+    "badge": "🧪 كيمياء",
+    "url": "https://khaled-sakr.com/",
+    "image": "https://khaled-sakr.com/static/media/mrkhaled-hero-image.325fad929423073c714b.webp"
+  },
+  {
+    "id": 2,
+    "name": "أحمد الجوهري",
+    "subject": "أحياء",
+    "badge": "🧬 أحياء",
+    "url": "https://ahmed-elgohary.com/",
+    "image": "images/gohary.7lbsaa.png"
+  },
+  {
+    "id": 3,
+    "name": "حسن ماهر",
+    "subject": "فيزياء",
+    "badge": "⚡ فيزياء",
+    "url": "https://hassanmaher.com/",
+    "image": "https://yt3.googleusercontent.com/aT1aSqA9WbgB-Nng_eJBaTBn8DjMHk4mnRWRpyREWTxry0Hcad617tW1SqFLUTb9Bba9OM-z=s900-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 4,
+    "name": "محمد أيمن",
+    "subject": "أحياء",
+    "badge": "🧬 أحياء",
+    "url": "https://mohammed-ayman.com/",
+    "image": "https://mohammed-ayman.com/static/media/aymanHomePage.86ad748ab3f3809ad288.png"
+  },
+  {
+    "id": 5,
+    "name": "محمد صلاح",
+    "subject": "عربي",
+    "badge": "📚 عربي",
+    "url": "https://bassthalk.com/",
+    "image": "https://i.servimg.com/u/f95/19/48/52/11/crkfbt10.png"
+  },
+  {
+    "id": 6,
+    "name": "محمد عبدالمعبود",
+    "subject": "فيزياء",
+    "badge": "⚡ فيزياء",
+    "url": "https://abdelmaaboud.com/",
+    "image": "https://yt3.googleusercontent.com/ytc/AIdro_ljVUgpcQpDaqUpWC1InEXY6ez0g7N74i4Zrym33dGWD7w=s900-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 7,
+    "name": "عبدالحميد حامد",
+    "subject": "إنجليزي",
+    "badge": "🌍 إنجليزي",
+    "url": "https://fullmark-en.com/",
+    "image": "https://fullmark-en.com/static/media/heroSection_image.c52ce175e4466d79987c.png"
+  },
+  {
+    "id": 8,
+    "name": "محمود مجدي",
+    "subject": "فيزياء",
+    "badge": "⚡ فيزياء",
+    "url": "https://mahmoud-magdy.com/",
+    "image": "https://mahmoud-magdy.com/static/media/MagdyImage.ab6042b951be2cb6297e.png"
+  },
+  {
+    "id": 9,
+    "name": "رضا الفاروق",
+    "subject": "عربي",
+    "badge": "📚 عربي",
+    "url": "https://mrredaelfarouk.com/",
+    "image": "https://mrredaelfarouk.com/storage/uploads/website/1723904748_yCL9UA.png"
+  },
+  {
+    "id": 10,
+    "name": "ماجد إمام",
+    "subject": "أحياء",
+    "badge": "🧬 أحياء",
+    "url": "https://magedemam.com/",
+    "image": "https://magedemam.com/static/media/magedHeroDark.030613c8f25048db24a9.webp"
+  },
+  {
+    "id": 11,
+    "name": "حميدة أحمد",
+    "subject": "أحياء",
+    "badge": "🧬 أحياء",
+    "url": "https://hamidaacademy.com/home-2",
+    "image": "https://yt3.googleusercontent.com/UIctohGmWR6RD8MIGoJeD3A_uidbTsogQbs10hVEyYK5dJakCaH834LNVRTbvqScHIsLAhqB=s160-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 12,
+    "name": "محمد عبدالجواد",
+    "subject": "كيمياء",
+    "badge": "🧪 كيمياء",
+    "url": "https://magacademy.co/",
+    "image": "https://backend.eduvalu.com/uploads/teachers/TEACHER-3757193/c78ffbf64a791da67752132a9aaf7c8f127fc4f4.jpeg"
+  },
+  {
+    "id": 13,
+    "name": "عبدالله الحبشي",
+    "subject": "كيمياء",
+    "badge": "🧪 كيمياء",
+    "url": "https://abdullah-habashy.com/",
+    "image": "https://abdullah-habashy.ocd-digital.com/static/media/profile.8e70dea72ff1fbd75bc8.png"
+  },
+  {
+    "id": 14,
+    "name": "محمد صلاح (إنجليزي)",
+    "subject": "إنجليزي",
+    "badge": "🌍 إنجليزي",
+    "url": "https://kayan-edu.net/teachers/84",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxqYpCdO5O3DGXmmIfXYdGHyaqFUj485eplQ&s"
+  },
+  {
+    "id": 15,
+    "name": "محمود رضوان",
+    "subject": "إنجليزي",
+    "badge": "🌍 إنجليزي",
+    "url": "https://www.mrenglishawy.com/ar/dashboard",
+    "image": "https://yt3.googleusercontent.com/0o7hT_pd04b-4ju9kxEqvhxjM9etEtJWnUwld5iuQM0xkpPrIl0baObVeRnR2bY0uaiuBoNN=s900-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 16,
+    "name": "حسام خليل",
+    "subject": "فيزياء",
+    "badge": "⚡ فيزياء",
+    "url": "https://hossamkhalil.online/",
+    "image": "https://hossamkhalil.online/img/c3.21a0b369.png"
+  },
+  {
+    "id": 17,
+    "name": "أحمد عصام",
+    "subject": "رياضيات",
+    "badge": "🔢 رياضيات",
+    "url": "https://mrahmedessam.online/",
+    "image": "https://mrahmedessam.online/images/essam-light.png"
+  },
+  {
+    "id": 18,
+    "name": "محمد سعد",
+    "subject": "رياضيات",
+    "badge": "🔢 رياضيات",
+    "url": "https://mr-mohammedsaad.com/",
+    "image": "https://mr-mohammedsaad.com/images/Mohamedsaad.png"
+  },
+  {
+    "id": 19,
+    "name": "إسلام الصعيدي (جغرافيا)",
+    "subject": "جغرافيا",
+    "badge": "🌏 جغرافيا",
+    "url": "https://eslamelseady.com/",
+    "image": "https://eslamelseady.com/front/img/about4.png"
+  },
+  {
+    "id": 20,
+    "name": "إسلام الصعيدي (رياضيات)",
+    "subject": "رياضيات",
+    "badge": "🔢 رياضيات",
+    "url": "https://edu-lens.com/teacher/%D8%A7%D8%B3%D9%84%D8%A7%D9%85-%D8%A7%D9%84%D8%B5%D8%B9%D9%8A%D8%AF%D9%8A",
+    "image": "https://edu-lens.com/images/teachers/-59eslam%20els3edy.jpg"
+  },
+  {
+    "id": 21,
+    "name": "كيرلس القص",
+    "subject": "فيزياء",
+    "badge": "⚡ فيزياء",
+    "url": "https://www.doctorinphysics.com/login",
+    "image": "https://yt3.googleusercontent.com/qDs6fv6_GrV7nfAIGF4avazwLjYp8eCMME4RyYMXRL-Ctav3_nZYraz1JsV0wd18mbD4IoKxmg=s900-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 22,
+    "name": "أحمد عادل",
+    "subject": "تاريخ",
+    "badge": "📜 تاريخ",
+    "url": "https://mr-ahmed-adel.com/",
+    "image": "https://yt3.googleusercontent.com/qvsTvSic0B36_MEQ9-ZkeaudcWHRJPkMxA_Y-Wz4rhjki1y_4qBYSV4SXVeq3MSzLbhZkQrptQ=s160-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 23,
+    "name": "إبراهيم البحيري",
+    "subject": "تاريخ",
+    "badge": "📜 تاريخ",
+    "url": "https://elkhidiwy.com/",
+    "image": "https://elkhidiwy.com/front/img/about2.png"
+  },
+  {
+    "id": 24,
+    "name": "أسامة الجابري",
+    "subject": "فلسفة",
+    "badge": "🧠 فلسفة",
+    "url": "https://osamaelgabry.com/",
+    "image": "https://yt3.googleusercontent.com/URj6x_fCfS626nTCCdw1AkG-81MCojidBmBFrePzsDVt_5IS5R7jgHO8kzoX1TZ_Pgz33MeLtIU=s160-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "id": 25,
+    "name": "محمد ناصر",
+    "subject": "جغرافيا",
+    "badge": "🌏 جغرافيا",
+    "url": "https://mrmohamednasser.com/",
+    "image": "https://mrmohamednasser.com/_next/image?url=%2FMrMohamedNasser.png&w=1200&q=75"
+  },
+  {
+    "id": 26,
+    "name": "محمد طارق",
+    "subject": "عربي",
+    "badge": "📚 عربي",
+    "url": "https://www.elqaiser.com/",
+    "image": "images/elqesser.7lbsaa.jpg"
+  },
+  {
+    "id": 27,
+    "name": "علي صلاح",
+    "subject": "فلسفة",
+    "badge": "🧠 فلسفة",
+    "url": "https://eduvalu.com/instructors/3",
+    "image": "https://cdn.ednuva.com/Chapters/2025-09/bnjOllIQzn1M2vcz4Dtqog5OUXrX0wbWHMQXWsZE.jpg"
+  },
+  {
+    "id": 28,
+    "name": "محمد حافظ",
+    "subject": "عربي",
+    "badge": "📚 عربي",
+    "url": "https://mohamed-hafez.com/",
+    "image": "https://mohamed-hafez.com/images/profile.png"
+  },
+  {
+    "id": 29,
+    "name": "أحمد نبيل",
+    "subject": "رياضيات",
+    "badge": "🔢 رياضيات",
+    "url": "https://www.mrahmednabil.com/",
+    "image": "https://backend.mrahmednabil.com/mrahmednabil/settings/9i7bb7CjaRzkLkoK9aJ9HLnGCIblgixxDeoZjlR1.webp"
+  },
+  {
+    "id": 30,
+    "name": "محمود سعد",
+    "subject": "أحياء",
+    "badge": "🧬 أحياء",
+    "url": "https://www.youtube.com/@dr.mahmoudsaadvector",
+    "image": "images/Vectorbiology-7lbsaa.jpg"
+  }
+]
