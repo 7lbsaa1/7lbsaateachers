@@ -16,7 +16,7 @@ function App() {
   const subtitleRef = useRef(null);
   const filterRef = useRef(null);
 
-  // أنيميشن الدخول الاحترافي باستخدام GSAP
+  // أنيميشن GSAP لدخول عناصر الـ Landing Page بنعومة
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(headerRef.current, { y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' })
@@ -48,6 +48,41 @@ function App() {
     setFilteredTeachers(result);
   }, [activeSubject, searchQuery, teachers]);
 
+  // دالة سحرية لحساب حركة الماوس وعمل تأثير الـ 3D Tilt والـ Spotlight الإضاءة المتحركة
+  const handleMouseMove = (e, id) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left; 
+    const y = e.clientY - rect.top; 
+
+    // تحديث مكان الإضاءة النيون جوة الكارت
+    card.style.setProperty('--mouse-x', `${x}px`);
+    card.style.setProperty('--mouse-y', `${y}px`);
+
+    // حساب زوايا الميل الـ 3D
+    const rotateX = ((y - rect.height / 2) / rect.height) * -15; // زاوية الميل الرأسي
+    const rotateY = ((x - rect.width / 2) / rect.width) * 15;   // زاوية الميل الأفقي
+
+    gsap.to(card, {
+      rotateX: rotateX,
+      rotateY: rotateY,
+      transformPerspective: 1000,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  };
+
+  // إرجاع الكارت لوضعه الطبيعي عند خروج الماوس
+  const handleMouseLeave = (e) => {
+    const card = e.currentTarget;
+    gsap.to(card, {
+      rotateX: 0,
+      rotateY: 0,
+      duration: 0.5,
+      ease: "power2.out"
+    });
+  };
+
   const filterCategories = [
     { id: 'all', label: 'الكل' },
     { id: 'كيمياء', label: 'كيمياء' },
@@ -63,11 +98,10 @@ function App() {
 
   return (
     <div dir="rtl" className="container-app">
-      {/* الدوائر المضيئة المتفاعلة في الخلفية (Neon Glow) */}
       <div className="bg-glow blob-1"></div>
       <div className="bg-glow blob-2"></div>
 
-      {/* الـ Navbar الزجاجي المطور */}
+      {/* الـ Navbar */}
       <nav ref={headerRef} className="glass-nav">
         <div className="nav-brand">
           <div className="logo-wrapper">
@@ -92,7 +126,7 @@ function App() {
         </button>
       </nav>
 
-      {/* البطل (Hero Section) للـ Landing Page */}
+      {/* الـ Hero Section */}
       <header className="hero-section">
         <motion.div 
           initial={{ opacity: 0, scale: 0.5 }}
@@ -100,7 +134,7 @@ function App() {
           transition={{ duration: 0.5 }}
           className="badge-top"
         >
-          <Sparkles size={14} /> <span>المستقبل يبدأ من هنا</span>
+          <Sparkles size={14} /> <span>تأثيرات بصرية متفاعلة 3D</span>
         </motion.div>
         <h2 ref={titleRef} className="main-title">
           مدرسي <span className="neon-text">الثانوية العامة</span> في شاشة واحدة
@@ -110,7 +144,7 @@ function App() {
         </p>
       </header>
 
-      {/* أزرار الفلترة بأنيميشن الماوس */}
+      {/* الفلاتر */}
       <div ref={filterRef} className="filters-wrapper">
         {filterCategories.map((cat) => (
           <button
@@ -123,24 +157,28 @@ function App() {
         ))}
       </div>
 
-      {/* شبكة الكروت المتفاعلة بأنيميشن فريمير موشن */}
+      {/* شبكة الكروت المتفاعلة بالـ 3D Effect مثل الفيديو */}
       <main>
         <motion.div layout className="teachers-grid">
           <AnimatePresence mode="popLayout">
-            {filteredTeachers.map((teacher) => (
+            {filteredTeachers.map((teacher, index) => (
               <motion.a
                 layout
-                initial={{ opacity: 0, transform: 'perspective(1000px) rotateX(10deg) translateY(30px)' }}
-                animate={{ opacity: 1, transform: 'perspective(1000px) rotateX(0deg) translateY(0px)' }}
+                initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-                whileHover={{ y: -8, scale: 1.02, boxShadow: '0 20px 40px rgba(56, 189, 248, 0.15)' }}
+                transition={{ duration: 0.5, delay: index * 0.03, ease: [0.23, 1, 0.32, 1] }}
                 key={teacher.id} 
                 href={teacher.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="premium-card"
+                className="premium-card dynamic-glow-card"
+                onMouseMove={(e) => handleMouseMove(e, teacher.id)}
+                onMouseLeave={handleMouseLeave}
               >
+                {/* طبقة الإضاءة النيون الخلفية المتفاعلة مع الماوس */}
+                <div className="spotlight-glow"></div>
+
                 <div className="card-top">
                   <div className="card-img-container">
                     <img src={teacher.image} alt={teacher.name} loading="lazy" />
@@ -149,7 +187,7 @@ function App() {
                   </div>
                   <div className="card-info">
                     <h3>{teacher.name}</h3>
-                    <p>كبير مستشاري مادة {teacher.subject}</p>
+                    <p>مدرس أول مادة {teacher.subject}</p>
                   </div>
                 </div>
                 <div className="card-action-btn">
@@ -162,13 +200,7 @@ function App() {
         </motion.div>
 
         {filteredTeachers.length === 0 && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="no-results"
-          >
-            نأسف، لم نجد أي مدرس يطابق هذا البحث حالياً.
-          </motion.div>
+          <div className="no-results">نأسف، لم نجد أي مدرس يطابق هذا البحث حالياً.</div>
         )}
       </main>
 
