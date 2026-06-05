@@ -1,23 +1,129 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    
-    <title>منصة حلبسة</title>
-    
-    <script>
-        // تحويل فوري وصارم برابط فيرسال
-        window.location.replace("https://7lbsaateachers.vercel.app/");
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>منصة حلبسة</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Tahoma, Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      overflow:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+      color:white;
+      position:relative;
+    }
+
+    .bg{
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:
+      radial-gradient(circle at top right,#3b82f655,transparent 25%),
+      radial-gradient(circle at bottom left,#06b6d455,transparent 25%);
+      animation: moveBg 6s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveBg{
+      from{
+        transform:scale(1) rotate(0deg);
+      }
+      to{
+        transform:scale(1.1) rotate(2deg);
+      }
+    }
+
+    .box{
+      position:relative;
+      z-index:2;
+      text-align:center;
+      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.1);
+      padding:50px 70px;
+      border-radius:25px;
+      box-shadow:0 0 40px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease;
+    }
+
+    .logo{
+      font-size:55px;
+      font-weight:bold;
+      margin-bottom:15px;
+      background:linear-gradient(90deg,#38bdf8,#60a5fa,#2563eb);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow{
+      from{
+        filter:drop-shadow(0 0 5px #38bdf8);
+      }
+      to{
+        filter:drop-shadow(0 0 20px #60a5fa);
+      }
+    }
+
+    .text{
+      font-size:20px;
+      opacity:0.9;
+    }
+
+    .loader{
+      margin:30px auto 0;
+      width:55px;
+      height:55px;
+      border:5px solid rgba(255,255,255,0.2);
+      border-top:5px solid #38bdf8;
+      border-radius:50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin{
+      100%{
+        transform:rotate(360deg);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+  </style>
 </head>
-<body style="background-color: #070a13;">
-    <script>
-        // خطة احتياطية لو الـ Script اللي فوق اتأخر لأي سبب
-        window.location.href = "https://7lbsaateachers.vercel.app/";
-    </script>
+
+<body>
+
+  <div class="bg"></div>
+
+  <div class="box">
+    <div class="logo">منصة حلبسة</div>
+    <div class="text">جاري تحويلك...</div>
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://7lbsaateachers.vercel.app/";
+    }, 1200);
+  </script>
+
 </body>
 </html>
