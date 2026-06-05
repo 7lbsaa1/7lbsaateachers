@@ -3,661 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="VtG7Ro7J-T9g1SR1m9kVf5uRQ-Y2hhUU6AHlDqdSjHI" />
-    
-    <title>منصة حلبسة | دليل أفضل مدرسين الثانوية العامة</title>
-    <link rel="shortcut icon" type="image/jpg" href="logox.jpg">
+    <title>منصة حلبسة لمدرسين الثانوية العامة</title>
+    <style>
+        /* الجزء الأول: الـ Reset والـ Base Styles والـ Dark Mode Variables */
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b);
+            --card-bg: rgba(255, 255, 255, 0.08);
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+            --badge-bg: rgba(56, 189, 248, 0.2);
+            --btn-bg: linear-gradient(135deg, #38bdf8, #0284c7);
+        }
 
-    <!-- ========================================= -->
-    <!-- إعدادات البحث (SEO) والكلمات المفتاحية -->
-    <!-- ========================================= -->
-    
-    <!-- الوصف: مهم جداً للظهور في جوجل -->
-    <meta name="description" content="منصة حلبسة (7lbsaa): الدليل الشامل لأفضل مدرسين الثانوية العامة في جميع المواد. تجميعة لأقوى المدرسين في الكيمياء، الفيزياء، اللغة العربية، الإنجليزية، والتاريخ." />
+        body.dark-mode {
+            --bg-gradient: linear-gradient(135deg, #020617, #0f172a);
+            --card-bg: rgba(15, 23, 42, 0.6);
+            --text-color: #f1f5f9;
+            --accent-color: #60a5fa;
+            --badge-bg: rgba(96, 165, 250, 0.15);
+            --btn-bg: linear-gradient(135deg, #60a5fa, #2563eb);
+        }
 
-    <!-- الكلمات المفتاحية: تشمل جميع المواد -->
-    <meta name="keywords" content="مدرسين ثانوية عامة, افضل مدرسين الثانوية العامة, ثانوية عامة, موقع حلبسة, منصة حلبسة, صفحة حلبسة, حلبسة, حلبسة الرسميه, مدرسين كيمياء الثانوية العامه, مدرسين فيزياء للثانوية العامه, مدرسين لغة عربية للثانوية العامه, مدرسين انجليزي للثانوية العامه, مدرسين احياء للثانوية العامه, مدرسين جيولوجيا للثانوية العامه, مدرسين فرنساوي للثانوية العامه, مدرسين رياضيات للثانوية العامه, مدرسين تاريخ للثانوية العامه, مدرسين جغرافيا للثانوية العامه, مدرسين فلسفة وعلم نفس للثانوية العامه, مدرسين الماني للثانوية العامه, 7lbsaa teachers">
-
-    <!-- الرابط الأصلي لهذه الصفحة -->
-    <link rel="canonical" href="https://7lbsaa1.github.io/7lbsaateachers/" />
-
-    <!-- ========================================= -->
-    <!-- إعدادات المشاركة (فيسبوك - واتساب - تويتر) -->
-    <!-- ========================================= -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://7lbsaa1.github.io/7lbsaateachers/" />
-    <meta property="og:title" content="منصة حلبسة | أقوى مدرسين الثانوية العامة" />
-    <meta property="og:description" content="دليلك للوصول لأفضل مدرسين الثانوية العامة في جميع المواد التعليمية." />
-    <!-- تم استخدام رابط الصورة بناءً على رابط الموقع الجديد -->
-    <meta property="og:image" content="https://7lbsaa1.github.io/7lbsaateachers/logox.jpg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="منصة حلبسة | مدرسين الثانوية العامة" />
-    <meta name="twitter:description" content="تجميعة لأفضل مدرسين الثانوية العامة في مصر." />
-    <meta name="twitter:image" content="https://7lbsaa1.github.io/7lbsaateachers/logox.jpg" />
-  <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: radial-gradient(circle at top, #8fa7ff 0%, #5b4ae2 40%, #2c1c69 100%);
+            background: var(--bg-gradient);
+            color: var(--text-color);
             min-height: 100vh;
-            padding: 20px;
-            position: relative;
-            color: #fff;
             overflow-x: hidden;
+            position: relative;
             transition: background 0.5s ease, color 0.5s ease;
         }
 
-        /* الوضع الداكن */
-        body.dark-mode {
-            background: radial-gradient(circle at top, #1a1a2e 0%, #16213e 40%, #0f0f1e 100%);
-            color: #e0e0e0;
-        }
-
-        /* زر تبديل الوضع */
-        .theme-toggle {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            z-index: 1000;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2em;
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.15) rotate(180deg);
-            box-shadow: 0 15px 40px rgba(106, 139, 255, 0.5);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
-
-        .theme-toggle:active {
-            transform: scale(0.95) rotate(180deg);
-        }
-
-        body.dark-mode .theme-toggle {
-            background: rgba(30, 30, 50, 0.5);
-            border-color: rgba(255, 255, 255, 0.15);
-        }
-
-        /* خلفية جزيئات متحركة */
-        .particles {
-            position: fixed;
-            inset: 0;
-            overflow: hidden;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 50%;
-            animation: float-particle 14s linear infinite;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
-
-        body.dark-mode .particle {
-            background: rgba(138, 180, 255, 0.4);
-            box-shadow: 0 0 10px rgba(138, 180, 255, 0.3);
-        }
-
-        @keyframes float-particle {
-            0% {
-                transform: translateY(0) translateX(0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(120px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* أيقونات عائمة */
-        .floating-icons {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .floating-icon {
-            position: absolute;
-            font-size: 3em;
-            opacity: 0.15;
-            animation: floatIcon 20s infinite ease-in-out;
-        }
-
-        body.dark-mode .floating-icon {
-            opacity: 0.08;
-        }
-
-        @keyframes floatIcon {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
-            }
-            25% {
-                transform: translateY(-50px) rotate(10deg);
-            }
-            50% {
-                transform: translateY(-100px) rotate(-10deg);
-            }
-            75% {
-                transform: translateY(-50px) rotate(5deg);
-            }
-        }
-
-        /* موجات متحركة في الخلفية */
-        .waves {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .wave {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 200%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: wave 15s linear infinite;
-        }
-
-        body.dark-mode .wave {
-            background: linear-gradient(90deg, transparent, rgba(100,120,200,0.08), transparent);
-        }
-
-        .wave:nth-child(2) {
-            animation-duration: 20s;
-            opacity: 0.5;
-        }
-
-        @keyframes wave {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
         .container {
-            max-width: 1600px;
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 40px 20px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
+        /* الجزء الثاني: الـ Glassmorphism والتأثيرات الحركية والأشكال العائمة */
         header {
             text-align: center;
-            padding: 40px 20px;
             margin-bottom: 50px;
-            animation: fadeInDown 0.9s ease;
-            position: relative;
-        }
-
-        header::before {
-            content: '✨';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 4em;
-            animation: sparkle 2s infinite;
-        }
-
-        @keyframes sparkle {
-            0%, 100% {
-                opacity: 1;
-                transform: translateX(-50%) scale(1);
-            }
-            50% {
-                opacity: 0.5;
-                transform: translateX(-50%) scale(1.2);
-            }
+            animation: fadeInUp 1s ease forwards;
         }
 
         header h1 {
             font-size: 3em;
             font-weight: 800;
-            text-shadow: 0 12px 30px rgba(0, 0, 0, 0.35),
-                         0 0 40px rgba(255, 255, 255, 0.2);
-            margin-bottom: 10px;
-            letter-spacing: 1.5px;
-            background: linear-gradient(45deg, #fff, #ffd700, #fff);
-            background-size: 200% auto;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff, var(--accent-color));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shimmer 3s linear infinite;
-        }
-
-        body.dark-mode header h1 {
-            background: linear-gradient(45deg, #a8d5ff, #6a8bff, #a8d5ff);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            text-shadow: 0 12px 30px rgba(106, 139, 255, 0.3);
-        }
-
-        @keyframes shimmer {
-            to {
-                background-position: 200% center;
-            }
         }
 
         header p {
             font-size: 1.2em;
-            opacity: 0.9;
-            animation: pulse 2s ease-in-out infinite;
+            opacity: 0.8;
         }
 
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 0.9;
-            }
-            50% {
-                opacity: 1;
-            }
+        .theme-toggle {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: var(--text-color);
+            font-size: 1.8em;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-35px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(15deg);
         }
 
-        /* فلاتر المواد */
+        /* الفلاتر */
         .subjects-filter {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             margin-bottom: 50px;
-            padding: 20px;
-            animation: fadeInUp 1s ease 0.3s backwards;
+            animation: fadeInUp 1s ease 0.2s backwards;
         }
 
         .filter-btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            color: var(--text-color);
             font-size: 1.1em;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-        }
-
-        body.dark-mode .filter-btn {
-            background: rgba(30, 40, 80, 0.3);
-            border-color: rgba(100, 120, 200, 0.2);
         }
 
         .filter-btn::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--btn-bg);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s;
         }
 
-        .filter-btn:hover::before {
-            width: 300px;
-            height: 300px;
+        .filter-btn.active::before, .filter-btn:hover::before {
+            opacity: 1;
         }
 
-        .filter-btn:hover {
+        .filter-btn.active, .filter-btn:hover {
+            border-color: transparent;
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(106, 139, 255, 0.4);
-            border-color: rgba(255, 255, 255, 0.3);
         }
 
-        .filter-btn.active {
-            background: linear-gradient(135deg, #6a8bff, #c183ff);
-            box-shadow: 0 12px 30px rgba(106, 139, 255, 0.6);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: scale(1.05);
-        }
-
-        body.dark-mode .filter-btn.active {
-            background: linear-gradient(135deg, #4a6bdf, #8163cf);
-        }
-
-        .filter-btn span {
-            position: relative;
-            z-index: 1;
-        }
-
+        /* الـ Grid والكروت */
         .teachers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 35px;
-            padding: 15px;
+            animation: fadeInUp 1s ease 0.4s backwards;
         }
 
         .teacher-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 25px;
+            text-decoration: none;
+            color: var(--text-color);
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 28px;
-            box-shadow: 0 25px 65px rgba(6, 5, 47, 0.35);
-            backdrop-filter: blur(12px);
-            transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-                        box-shadow 0.45s ease, border 0.45s ease, opacity 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            padding: 25px 25px 40px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            overflow: hidden;
-            border: 2px solid transparent;
-            animation: cardAppear 0.8s ease backwards;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
-        body.dark-mode .teacher-card {
-            background: rgba(20, 25, 45, 0.6);
-            border-color: rgba(100, 120, 200, 0.15);
+        .teacher-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 25px 50px rgba(56, 189, 248, 0.15);
         }
 
         .teacher-card.hidden {
             display: none;
         }
 
-        .teacher-card:nth-child(1) { animation-delay: 0.1s; }
-        .teacher-card:nth-child(2) { animation-delay: 0.15s; }
-        .teacher-card:nth-child(3) { animation-delay: 0.2s; }
-        .teacher-card:nth-child(4) { animation-delay: 0.25s; }
-        .teacher-card:nth-child(5) { animation-delay: 0.3s; }
-        .teacher-card:nth-child(6) { animation-delay: 0.35s; }
-        .teacher-card:nth-child(7) { animation-delay: 0.4s; }
-        .teacher-card:nth-child(8) { animation-delay: 0.45s; }
-        .teacher-card:nth-child(9) { animation-delay: 0.5s; }
-        .teacher-card:nth-child(10) { animation-delay: 0.55s; }
-        .teacher-card:nth-child(11) { animation-delay: 0.6s; }
-        .teacher-card:nth-child(12) { animation-delay: 0.65s; }
-        .teacher-card:nth-child(13) { animation-delay: 0.7s; }
-        .teacher-card:nth-child(14) { animation-delay: 0.75s; }
-        .teacher-card:nth-child(15) { animation-delay: 0.8s; }
-        .teacher-card:nth-child(16) { animation-delay: 0.85s; }
-        .teacher-card:nth-child(17) { animation-delay: 0.9s; }
-        .teacher-card:nth-child(18) { animation-delay: 0.95s; }
-        .teacher-card:nth-child(19) { animation-delay: 1s; }
-        .teacher-card:nth-child(20) { animation-delay: 1.05s; }
-        .teacher-card:nth-child(21) { animation-delay: 1.1s; }
-        .teacher-card:nth-child(22) { animation-delay: 1.15s; }
-        .teacher-card:nth-child(23) { animation-delay: 1.2s; }
-        .teacher-card:nth-child(24) { animation-delay: 1.25s; }
-        .teacher-card:nth-child(25) { animation-delay: 1.3s; }
-
-        @keyframes cardAppear {
-            from {
-                opacity: 0;
-                transform: translateY(50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .teacher-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 60%);
-            opacity: 0;
-            transition: opacity 0.45s ease;
-            z-index: 0;
-        }
-
-        body.dark-mode .teacher-card::before {
-            background: linear-gradient(135deg, rgba(100,120,200,0.15), transparent 60%);
-        }
-
-        .teacher-card::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-        }
-
-        .teacher-card:hover {
-            transform: translateY(-15px) scale(1.02) rotateY(2deg);
-            box-shadow: 0 35px 85px rgba(58, 47, 138, 0.45),
-                        0 0 40px rgba(138, 127, 255, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.25);
-        }
-
-        body.dark-mode .teacher-card:hover {
-            box-shadow: 0 35px 85px rgba(0, 0, 0, 0.6),
-                        0 0 40px rgba(106, 139, 255, 0.4);
-            border-color: rgba(138, 180, 255, 0.3);
-        }
-
-        .teacher-card:hover::before {
-            opacity: 1;
-        }
-
-        .teacher-card:hover::after {
-            top: 150%;
-            left: 150%;
-        }
-
         .teacher-image-wrapper {
             width: 100%;
-            padding: 25px;
-            border-radius: 22px;
-            background: linear-gradient(145deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04));
-            box-shadow: inset 0 10px 25px rgba(255, 255, 255, 0.12),
-                        inset 0 -10px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 28px;
-            position: relative;
+            height: 260px;
+            border-radius: 20px;
             overflow: hidden;
-            transition: all 0.5s ease;
-        }
-
-        body.dark-mode .teacher-image-wrapper {
-            background: linear-gradient(145deg, rgba(40,50,80,0.3), rgba(20,30,50,0.5));
-            box-shadow: inset 0 10px 25px rgba(100, 120, 200, 0.1),
-                        inset 0 -10px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .teacher-card:hover .teacher-image-wrapper {
-            box-shadow: inset 0 10px 35px rgba(255, 255, 255, 0.2),
-                        inset 0 -10px 35px rgba(0, 0, 0, 0.15),
-                        0 0 30px rgba(138, 127, 255, 0.4);
+            position: relative;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.2);
         }
 
         .teacher-image {
             width: 100%;
-            max-height: 380px;
-            object-fit: contain;
-            display: block;
-            border-radius: 18px;
-            transition: transform 0.5s ease, filter 0.5s ease;
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        body.dark-mode .teacher-image {
-            background: rgba(30, 40, 60, 0.3);
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .teacher-card:hover .teacher-image {
-            transform: scale(1.05) rotate(1deg);
-            filter: brightness(1.1) drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+            transform: scale(1.08);
         }
 
         .subject-badge {
             position: absolute;
-            top: 18px;
-            right: 18px;
-            background: linear-gradient(135deg, #f8d34c, #ff8c42);
-            color: #2b1c4c;
-            padding: 10px 25px;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 1em;
-            box-shadow: 0 12px 25px rgba(255, 193, 7, 0.35);
-            animation: badgeBounce 2s infinite;
-            z-index: 2;
-        }
-
-        body.dark-mode .subject-badge {
-            background: linear-gradient(135deg, #d8b33c, #df7c32);
-        }
-
-        @keyframes badgeBounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
+            top: 15px;
+            right: 15px;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            z-index: 3;
         }
 
         .teacher-info {
             text-align: center;
-            z-index: 1;
+            width: 100%;
         }
 
         .teacher-name {
-            font-size: 1.8em;
-            font-weight: 800;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #fff, #a8d5ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease;
-        }
-
-        body.dark-mode .teacher-name {
-            background: linear-gradient(135deg, #a8d5ff, #6a8bff);
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-
-        .teacher-card:hover .teacher-name {
-            transform: scale(1.05);
-            text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
         .teacher-subject {
-            font-size: 1.1em;
-            margin-bottom: 25px;
-            opacity: 0.85;
-            transition: all 0.3s ease;
-        }
-
-        .teacher-card:hover .teacher-subject {
-            opacity: 1;
-            transform: translateY(-3px);
+            font-size: 1em;
+            opacity: 0.7;
+            margin-bottom: 20px;
         }
 
         .visit-platform-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 28px;
-            border-radius: 999px;
-            background: linear-gradient(135deg, #6a8bff, #c183ff);
-            color: white;
-            font-weight: 700;
-            font-size: 1em;
-            box-shadow: 0 12px 30px rgba(106, 139, 255, 0.45);
-            transition: all 0.35s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        body.dark-mode .visit-platform-btn {
-            background: linear-gradient(135deg, #4a6bdf, #8163cf);
-        }
-
-        .visit-platform-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .teacher-card:hover .visit-platform-btn::before {
-            width: 300px;
-            height: 300px;
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 15px;
+            background: var(--btn-bg);
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+            transition: all 0.3s;
         }
 
         .teacher-card:hover .visit-platform-btn {
-            transform: scale(1.1) translateY(-2px);
-            box-shadow: 0 16px 40px rgba(106, 139, 255, 0.65);
+            box-shadow: 0 12px 25px rgba(56, 189, 248, 0.4);
+            letter-spacing: 0.5px;
         }
 
+        /* الخلفية التفاعلية والجزيئات */
+        .particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: floatUp infinite linear;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+
+        .floating-icons {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 2.5em;
+            opacity: 0.03;
+            animation: floatSlow infinite ease-in-out;
+        }
+
+        body.dark-mode .floating-icon {
+            opacity: 0.05;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(180deg); }
+        }
+
+        .waves {
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            height: 150px;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0; left: 0; width: 200%; height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,4.75,55.05,12.58,83,19.26,160.82,37.89,242.11,68.12,321.39,56.44Z" fill="%2338bdf8" opacity="0.15"/></svg>');
+            background-size: 50% 100%;
+            animation: waveMove 20s linear infinite;
+        }
+
+        .wave:nth-child(2) {
+            bottom: 5px;
+            opacity: 0.2;
+            animation: waveMove 12s linear infinite reverse;
+        }
+
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* الجزء الثالث: الـ Footer والميديا كويريز والنجوم */
         footer {
             text-align: center;
             margin-top: 50px;
@@ -700,12 +361,8 @@
         }
 
         @keyframes footerShine {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         footer strong {
@@ -723,7 +380,6 @@
             background-clip: text;
         }
 
-        /* نجوم لامعة */
         .star {
             position: fixed;
             width: 2px;
@@ -741,14 +397,8 @@
         }
 
         @keyframes starTwinkle {
-            0%, 100% {
-                opacity: 0.3;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.5);
-            }
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
         }
 
         @media (max-width: 768px) {
@@ -760,60 +410,26 @@
                 font-size: 1.6em;
             }
 
-            header h1 {
-                font-size: 2.2em;
-            }
-
-            .teacher-name {
-                font-size: 1.5em;
-            }
-
-            .teacher-card {
-                padding: 20px;
-            }
-
-            .teacher-image-wrapper {
-                padding: 18px;
-            }
-
-            .floating-icon {
-                font-size: 2em;
-            }
-
-            .teachers-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .subjects-filter {
-                gap: 10px;
-            }
-
-            .filter-btn {
-                padding: 10px 20px;
-                font-size: 1em;
-            }
+            header h1 { font-size: 2.2em; }
+            .teacher-name { font-size: 1.5em; }
+            .teacher-card { padding: 20px; }
+            .teacher-image-wrapper { padding: 18px; }
+            .floating-icon { font-size: 2em; }
+            .teachers-grid { grid-template-columns: 1fr; }
+            .subjects-filter { gap: 10px; }
+            .filter-btn { padding: 10px 20px; font-size: 1em; }
         }
     </style>
 </head>
 <body>
-    <!-- زر تبديل الوضع -->
-    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
-        🌙
-    </button>
+    <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">🌙</button>
 
-    <!-- جزيئات الخلفية -->
     <div class="particles" id="particles"></div>
-
-    <!-- أيقونات عائمة -->
     <div class="floating-icons" id="floatingIcons"></div>
-
-    <!-- موجات -->
     <div class="waves">
         <div class="wave"></div>
         <div class="wave"></div>
     </div>
-
-    <!-- نجوم -->
     <div id="stars"></div>
 
     <div class="container">
@@ -822,7 +438,6 @@
             <p>اختر المدرس المفضل واضغط على صورته للوصول إلى منصته التعليمية مباشرةً</p>
         </header>
 
-        <!-- فلاتر المواد -->
         <div class="subjects-filter">
             <button class="filter-btn active" data-subject="all"><span>🌟 الكل</span></button>
             <button class="filter-btn" data-subject="كيمياء"><span>🧪 كيمياء</span></button>
@@ -837,7 +452,6 @@
         </div>
 
         <div class="teachers-grid">
-            <!-- خالد صقر -->
             <a class="teacher-card" data-subject="كيمياء" href="https://khaled-sakr.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧪 كيمياء</span>
@@ -850,7 +464,6 @@
                 </div>
             </a>
 
-            <!-- أحمد الجوهري -->
             <a class="teacher-card" data-subject="أحياء" href="https://ahmed-elgohary.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧬 أحياء</span>
@@ -863,7 +476,6 @@
                 </div>
             </a>
 
-            <!-- حسن ماهر -->
             <a class="teacher-card" data-subject="فيزياء" href="https://hassanmaher.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">⚡ فيزياء</span>
@@ -876,7 +488,6 @@
                 </div>
             </a>
 
-            <!-- محمد أيمن -->
             <a class="teacher-card" data-subject="أحياء" href="https://mohammed-ayman.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧬 أحياء</span>
@@ -889,7 +500,6 @@
                 </div>
             </a>
 
-            <!-- محمد صلاح (عربي) -->
             <a class="teacher-card" data-subject="عربي" href="https://bassthalk.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">📚 عربي</span>
@@ -902,7 +512,6 @@
                 </div>
             </a>
 
-            <!-- محمد عبدالمعبود -->
             <a class="teacher-card" data-subject="فيزياء" href="https://abdelmaaboud.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">⚡ فيزياء</span>
@@ -915,7 +524,6 @@
                 </div>
             </a>
 
-            <!-- عبدالحميد حامد -->
             <a class="teacher-card" data-subject="إنجليزي" href="https://fullmark-en.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🌍 إنجليزي</span>
@@ -928,7 +536,6 @@
                 </div>
             </a>
 
-            <!-- محمود مجدي -->
             <a class="teacher-card" data-subject="فيزياء" href="https://mahmoud-magdy.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">⚡ فيزياء</span>
@@ -941,7 +548,6 @@
                 </div>
             </a>
 
-            <!-- رضا الفاروق -->
             <a class="teacher-card" data-subject="عربي" href="https://mrredaelfarouk.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">📚 عربي</span>
@@ -954,7 +560,6 @@
                 </div>
             </a>
 
-            <!-- ماجد إمام -->
             <a class="teacher-card" data-subject="أحياء" href="https://magedemam.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧬 أحياء</span>
@@ -967,7 +572,6 @@
                 </div>
             </a>
 
-            <!-- حميدة أحمد -->
             <a class="teacher-card" data-subject="أحياء" href="https://hamidaacademy.com/home-2" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧬 أحياء</span>
@@ -980,7 +584,6 @@
                 </div>
             </a>
 
-            <!-- محمد عبدالجواد -->
             <a class="teacher-card" data-subject="كيمياء" href="https://magacademy.co/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧪 كيمياء</span>
@@ -993,7 +596,6 @@
                 </div>
             </a>
 
-            <!-- عبدلله الحبشي -->
             <a class="teacher-card" data-subject="كيمياء" href="https://abdullah-habashy.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧪 كيمياء</span>
@@ -1006,7 +608,6 @@
                 </div>
             </a>
 
-            <!-- محمد صلاح (إنجليزي) -->
             <a class="teacher-card" data-subject="إنجليزي" href="https://kayan-edu.net/teachers/84" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🌍 إنجليزي</span>
@@ -1019,7 +620,6 @@
                 </div>
             </a>
 
-            <!-- محمد رضوان (إنجلشاوي) -->
             <a class="teacher-card" data-subject="إنجليزي" href="https://www.mrenglishawy.com/ar/dashboard" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🌍 إنجليزي</span>
@@ -1032,7 +632,6 @@
                 </div>
             </a>
 
-            <!-- حسام خليل -->
             <a class="teacher-card" data-subject="فيزياء" href="https://hossamkhalil.online/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">⚡ فيزياء</span>
@@ -1045,7 +644,6 @@
                 </div>
             </a>
 
-            <!-- أحمد عصام -->
             <a class="teacher-card" data-subject="رياضيات" href="https://mrahmedessam.online/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🔢 رياضيات</span>
@@ -1058,7 +656,6 @@
                 </div>
             </a>
 
-            <!-- محمد سعد -->
             <a class="teacher-card" data-subject="رياضيات" href="https://mr-mohammedsaad.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🔢 رياضيات</span>
@@ -1071,7 +668,6 @@
                 </div>
             </a>
 
-            <!-- إسلام الصعيدي (جغرافيا) -->
             <a class="teacher-card" data-subject="جغرافيا" href="https://eslamelseady.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🌏 جغرافيا</span>
@@ -1084,7 +680,6 @@
                 </div>
             </a>
 
-            <!-- إسلام الصعيدي (رياضيات) -->
             <a class="teacher-card" data-subject="رياضيات" href="https://edu-lens.com/teacher/%D8%A7%D8%B3%D9%84%D8%A7%D9%85-%D8%A7%D9%84%D8%B5%D8%B9%D9%8A%D8%AF%D9%8A" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🔢 رياضيات</span>
@@ -1097,7 +692,6 @@
                 </div>
             </a>
 
-            <!-- كيرلس القص -->
             <a class="teacher-card" data-subject="فيزياء" href="https://www.doctorinphysics.com/login" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">⚡ فيزياء</span>
@@ -1110,7 +704,6 @@
                 </div>
             </a>
 
-            <!-- أحمد عادل -->
             <a class="teacher-card" data-subject="تاريخ" href="https://mr-ahmed-adel.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">📜 تاريخ</span>
@@ -1123,7 +716,6 @@
                 </div>
             </a>
 
-            <!-- إبراهيم البحيري -->
             <a class="teacher-card" data-subject="تاريخ" href="https://elkhidiwy.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">📜 تاريخ</span>
@@ -1136,7 +728,6 @@
                 </div>
             </a>
 
-            <!-- أسامة الجابري -->
             <a class="teacher-card" data-subject="فلسفة" href="https://osamaelgabry.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧠 فلسفة</span>
@@ -1149,7 +740,6 @@
                 </div>
             </a>
 
-            <!-- محمد ناصر -->
             <a class="teacher-card" data-subject="جغرافيا" href="https://mrmohamednasser.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🌏 جغرافيا</span>
@@ -1162,7 +752,6 @@
                 </div>
             </a>
 
-            <!-- محمد طارق -->
             <a class="teacher-card" data-subject="عربي" href="https://www.elqaiser.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">📚 عربي</span>
@@ -1174,8 +763,7 @@
                     <span class="visit-platform-btn">زيارة المنصة 🚀</span>
                 </div>
             </a>
-            
-            <!-- علي صلاح -->
+
             <a class="teacher-card" data-subject="فلسفة" href="https://eduvalu.com/instructors/3" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧠 فلسفة</span>
@@ -1187,8 +775,7 @@
                     <span class="visit-platform-btn">زيارة المنصة 🚀</span>
                 </div>
             </a>
-            
-            <!-- محمد حافظ -->
+
             <a class="teacher-card" data-subject="عربي" href="https://mohamed-hafez.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">📚 عربي</span>
@@ -1200,8 +787,7 @@
                     <span class="visit-platform-btn">زيارة المنصة 🚀</span>
                 </div>
             </a>
-            
-            <!-- أحمد نبيل -->
+
             <a class="teacher-card" data-subject="رياضيات" href="https://www.mrahmednabil.com/" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🔢 رياضيات</span>
@@ -1212,9 +798,8 @@
                     <p class="teacher-subject">مدرس الرياضيات</p>
                     <span class="visit-platform-btn">زيارة المنصة 🚀</span>
                 </div>
-
             </a>
-                        <!-- محمود سعد -->
+
             <a class="teacher-card" data-subject="أحياء" href="https://www.youtube.com/@dr.mahmoudsaadvector" target="_blank" rel="noopener">
                 <div class="teacher-image-wrapper">
                     <span class="subject-badge">🧬 أحياء</span>
@@ -1226,11 +811,10 @@
                     <span class="visit-platform-btn">زيارة المنصة 🚀</span>
                 </div>
             </a>
-
         </div>
 
         <footer>
-            <p><strong> منصة حلبسة-لمدرسين الثانوية العامة</strong> - جميع الحقوق محفوظة © 2026</p>
+            <p><strong>منصة حلبسة لمدرسين الثانوية العامة</strong> - جميع الحقوق محفوظة © 2026</p>
         </footer>
     </div>
 
@@ -1239,7 +823,6 @@
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
-        // التحقق من الوضع المحفوظ
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             body.classList.add('dark-mode');
@@ -1248,7 +831,6 @@
 
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            
             if (body.classList.contains('dark-mode')) {
                 themeToggle.textContent = '☀️';
                 localStorage.setItem('theme', 'dark');
@@ -1275,10 +857,10 @@
             particlesContainer.appendChild(particle);
         }
 
-        // أيقونات عائمة
+        // أيقونات عائمة في الخلفية
         const floatingIconsContainer = document.getElementById('floatingIcons');
         const icons = ['📚', '✏️', '🎓', '📖', '🔬', '🧪', '⚗️', '🧬', '⚡', '🌟', '🌍', '📝', '🔢', '🌏', '📜', '🧠'];
-        
+
         for (let i = 0; i < 15; i++) {
             const icon = document.createElement('div');
             icon.className = 'floating-icon';
@@ -1301,25 +883,21 @@
             starsContainer.appendChild(star);
         }
 
-        // نظام الفلترة
+        // نظام الفلترة الذكي للمواد
         const filterBtns = document.querySelectorAll('.filter-btn');
         const teacherCards = document.querySelectorAll('.teacher-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // إزالة active من جميع الأزرار
                 filterBtns.forEach(b => b.classList.remove('active'));
-                // إضافة active للزر المضغوط
                 btn.classList.add('active');
 
                 const selectedSubject = btn.getAttribute('data-subject');
 
                 teacherCards.forEach(card => {
                     const cardSubject = card.getAttribute('data-subject');
-                    
                     if (selectedSubject === 'all' || cardSubject === selectedSubject) {
                         card.classList.remove('hidden');
-                        // إعادة تشغيل الأنيمشن
                         card.style.animation = 'none';
                         setTimeout(() => {
                             card.style.animation = '';
@@ -1328,15 +906,13 @@
                         card.classList.add('hidden');
                     }
                 });
-
                 console.log(`🔍 تم الفلترة حسب: ${selectedSubject === 'all' ? 'جميع المواد' : selectedSubject}`);
             });
         });
 
-        console.log('🎓 منصة حلبسة:29 مدرس متاح الآن! 🚀') 
+        console.log('🎓 منصة حلبسة: المدرسين جاهزون الآن! 🚀');
         console.log('🌓 نظام الوضع الداكن/الفاتح جاهز!');
         console.log('✨ نظام الفلترة حسب المادة جاهز!');
     </script>
 </body>
-</html>    
 </html>
